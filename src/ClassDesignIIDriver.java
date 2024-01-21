@@ -20,7 +20,7 @@ public class ClassDesignIIDriver {
     public static void main(String[] args) {
         //uncomment the desired Driver or Demo below and run this code to test your progress
         shapeDriver();
-        //lineSegmentDriver();
+        lineSegmentDriver();
         //immutableFractionDriver();        
         //customMathDriver();
         //passByReferenceDemo();
@@ -41,23 +41,23 @@ public class ClassDesignIIDriver {
     
     public static void lineSegmentDriver() {
         System.out.println("uncomment the code to use the lineSegmentDriver");
-        /*LineSegment a = new LineSegment();
+        LineSegment a = new LineSegment();
         LineSegment b = new LineSegment(new Point2D(1,1), new Point2D(2,2));
         LineSegment c = new LineSegment(b);
         
-        a.setStartPoint(new Point2D(3, 3));
-        a.setEndPoint(new Point2D(4, 4));
+        a.setStart(new Point2D(3, 3));
+        a.setEnd(new Point2D(4, 4));
         
         System.out.println("Line a: " + a.toString());
         System.out.println("Line b: " + b.toString());
         System.out.println("Line c: " + c.toString());
         
-        System.out.println("Line b's distance between points: " + b.distance());
+        System.out.println("Line b's distance between points: " + b.getDistance());
         
         System.out.println("Does a equal b? " + a.equals(b));
         System.out.println("Does a equal c? " + a.equals(c));
         System.out.println("Does b equal c? " + b.equals(c));
-        */
+
     }
     
     
