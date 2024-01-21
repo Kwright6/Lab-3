@@ -1,4 +1,4 @@
-import java.awt.Dimension;
+import java.awt.*;
 
 /*
  * Lab2 Driver:   ClassDesignIIDriver.java
@@ -19,7 +19,7 @@ public class ClassDesignIIDriver {
     
     public static void main(String[] args) {
         //uncomment the desired Driver or Demo below and run this code to test your progress
-        //shapeDriver();
+        shapeDriver();
         //lineSegmentDriver();
         //immutableFractionDriver();        
         //customMathDriver();
@@ -27,8 +27,8 @@ public class ClassDesignIIDriver {
     }
 
     private static void shapeDriver() {
-        System.out.println("uncomment the code to use the shapeDriver");
-        /*
+        // System.out.println("uncomment the code to use the shapeDriver");
+
         Shape a = new Shape();
         Shape b = new Shape(10, 10, Color.DARK_GRAY);
         
@@ -37,7 +37,6 @@ public class ClassDesignIIDriver {
         
         System.out.println("a: " + a);
         System.out.println("b: " + b);
-        */
     }
     
     public static void lineSegmentDriver() {
