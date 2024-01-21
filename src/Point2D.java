@@ -11,6 +11,14 @@ public class Point2D
         this.x = x;
         this.y = y;
     }
+
+    //copy constructor
+    public Point2D(Point2D other) {
+        x = other.x;
+        y = other.y;
+        // Question: We don't need getX() or getY() here because we are in the same class
+        // and can directly access our private instance variables
+    }
     
     //This method should set your private variable x equal to nX. 
     public void setX(int nX) { 
@@ -50,5 +58,15 @@ public class Point2D
         return "(" + x + ", " + y + ")";
     }
 
-    
+    @Override
+    public boolean equals(Object object) {
+        // check if argument is an instance of Point2D
+        if (!(object instanceof Point2D)) {
+            return false;
+        }
+
+        Point2D otherPoint = (Point2D) object;  //type cast the argument to Point2D.
+
+        return getX() == otherPoint.getX() && getY() == otherPoint.getY();
+    }
 }
