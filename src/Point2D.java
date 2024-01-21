@@ -30,14 +30,15 @@ public class Point2D
         this.y = nY;
     }
     
-    //This function should return a copy of your private integer x; 
-    public int getX() { 
-        return this.x;
+    // This function should return a copy of your private integer x;
+    public int getX() {
+        // TODO: CHECK IF CORRECT
+        return new Point2D(this).getX();
     }
     
-    //Similar to above, but for y. 
+    // Similar to above, but for y.
     public int getY() { 
-        return this.y;
+        return new Point2D(this).getY();
     }
     
     //This function sets both x and y to zero. 
@@ -55,7 +56,7 @@ public class Point2D
     @Override 
     //returns a string representation of the point 
     public String toString() { 
-        return "(" + x + ", " + y + ")";
+        return "(" + this.x + ", " + this.y + ")";
     }
 
     @Override

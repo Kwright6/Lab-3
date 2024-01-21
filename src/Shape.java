@@ -36,7 +36,7 @@ public class Shape {
 
     // Instance Methods
     public int getX() {
-        return x;
+        return this.x;
     }
 
     public void setX(int x) {
@@ -44,7 +44,7 @@ public class Shape {
     }
 
     public int getY() {
-        return y;
+        return this.y;
     }
 
     public void setY(int y) {
