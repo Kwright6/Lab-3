@@ -19,7 +19,7 @@ public class ClassDesignIIDriver {
     
     public static void main(String[] args) {
         //uncomment the desired Driver or Demo below and run this code to test your progress
-        shapeDriver();
+        //shapeDriver();
         lineSegmentDriver();
         //immutableFractionDriver();        
         //customMathDriver();
@@ -40,7 +40,7 @@ public class ClassDesignIIDriver {
     }
     
     public static void lineSegmentDriver() {
-        System.out.println("uncomment the code to use the lineSegmentDriver");
+        //System.out.println("uncomment the code to use the lineSegmentDriver");
         LineSegment a = new LineSegment();
         LineSegment b = new LineSegment(new Point2D(1,1), new Point2D(2,2));
         LineSegment c = new LineSegment(b);
