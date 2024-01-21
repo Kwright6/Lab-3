@@ -32,13 +32,12 @@ public class Point2D
     
     // This function should return a copy of your private integer x;
     public int getX() {
-        // TODO: CHECK IF CORRECT
-        return new Point2D(this).getX();
+        return new Point2D(this).x;  // I kinda understand how this works
     }
     
     // Similar to above, but for y.
     public int getY() { 
-        return new Point2D(this).getY();
+        return new Point2D(this).y;
     }
     
     //This function sets both x and y to zero. 

@@ -6,8 +6,8 @@ Class Constraints
 
 public class LineSegment {
     // Data Fields
-    private Point2D start;
-    private Point2D end;
+    private Point2D start = new Point2D();
+    private Point2D end = new Point2D();
 
     // Constructors
     public LineSegment() {
