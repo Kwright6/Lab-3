@@ -1,4 +1,3 @@
-// TODO: 4.1 Class Constraints (CHECK IF TRUE WHEN DONE)
 /*
 Class Constraints
    - Numerators and denominators are unchangeable once set by the constructor.
@@ -26,8 +25,7 @@ public class Fraction {
         return this.numerator + "\\" + this.denominator;
     }
 
-    // TODO: 4.4 Methods
-    // todo: Return a new fraction which is the sum of this fraction and the argument fraction.
+    // Methods
     public Fraction add(Fraction that) {
         // Declare & Initialize Variables
         int newNumerator = 0;
