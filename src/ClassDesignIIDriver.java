@@ -63,7 +63,7 @@ public class ClassDesignIIDriver {
     
     public static void immutableFractionDriver() {
         //System.out.println("Uncomment the code to use the immutableFractionDriver");
-        /*Fraction a = new Fraction(1, 2);
+        Fraction a = new Fraction(1, 2);
         Fraction b = new Fraction(3, 4);
         Fraction c = new Fraction(b);
     
@@ -72,13 +72,14 @@ public class ClassDesignIIDriver {
         System.out.println("c: " + c);
         
         // fix the following 2 errors
-        System.out.println("a.num:" + a.getNum());
-        System.out.println("b.denom:" + b.getDenom());
+        //System.out.println("a.num:" + a.getNum());
+        System.out.println("a.num: " + a.numerator);
+        System.out.println("b.denom: " + b.denominator);
         
         
         // which of the following code is correct to change the fraction a?
         a.add(b);
-        a = a.add(b);
+        a = a.add(b);  // this one will change fraction 'a' as we return a new fraction object that gets stored in 'a'
         
         System.out.println("a: " +a);
         System.out.println("b: " + b);
@@ -86,8 +87,6 @@ public class ClassDesignIIDriver {
         
         System.out.println("a.equals(b): " + a.equals(b));
         System.out.println("b.equals(c): " + b.equals(c));
-        */
-        
     }
 
     private static void customMathDriver() {

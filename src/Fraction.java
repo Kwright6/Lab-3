@@ -8,11 +8,11 @@ Class Constraints
  */
 public class Fraction {
     // Data Fields
-    public final double numerator; // Q: Why don’t we make this data private? A: So it can be read in another class
-    public final double denominator; // Q: What data types should these items be? A: double or float if we want more precision
+    public final int numerator; // Q: Why don’t we make this data private? A: So it can be read in another class
+    public final int denominator; // Q: What data types should these items be? A: int to match sample output
 
     // Constructor
-    public Fraction(double numerator, double denominator) {
+    public Fraction(int numerator, int denominator) {
         this.numerator = numerator;
         this.denominator = denominator;
     }
@@ -27,21 +27,35 @@ public class Fraction {
     }
 
     // TODO: 4.4 Methods
+    // todo: Return a new fraction which is the sum of this fraction and the argument fraction.
     public Fraction add(Fraction that) {
-        // todo:
-        //      Returns a new fraction which is the sum of this fraction and the argument fraction.
-        //      This method is tricky! Review how to add fractions, and consider writing helper methods which you can call in add.
-        return new Fraction(0,0);  // todo: placeholder
+        // Declare & Initialize Variables
+        int newNumerator = 0;
+        int newDenominator = -1;
+
+        if (this.numerator != this.denominator) {
+            // If Uncommon Denominators: [(n1*d2)+(n2*d1)] / (d1*d2)
+            newNumerator = ((this.numerator * that.denominator) + (that.numerator * this.denominator));
+            newDenominator = this.denominator * that.denominator;
+
+            return new Fraction(newNumerator, newDenominator);
+        }
+
+        // Common Denominators: (n1+n2) / d1
+        return new Fraction(this.numerator + this.denominator, this.denominator);
     }
 
+    @Override
     public boolean equals(Object other) {
-        // todo:
-        /*  - Indicates whether this fraction is equal to the specified fraction.
-            - Since Fraction is a subclass of Object, it inherits an equals method from Object which takes an Object as an argument.
-                - Our new method will override the Object method, so our method has to take an Object argument as well.
-                - So, we start the method by making sure the argument is a non-null Fraction, and if so, we cast the argument from Object to Fraction.
-                - Then, we compare the numerators and denominators of the fractions.
-         */
-        return false;
+        // check if other is a non-null fraction
+        if (!(other instanceof Fraction) || other == null) {
+            return false;
+        }
+
+        // cast the argument from Object to Fraction
+        Fraction otherPoint = (Fraction) other;
+
+        // compare the numerators and denominators of the fractions
+        return numerator == otherPoint.numerator && denominator == otherPoint.denominator;
     }
 }
