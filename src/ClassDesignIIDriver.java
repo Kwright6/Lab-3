@@ -62,7 +62,7 @@ public class ClassDesignIIDriver {
     
     
     public static void immutableFractionDriver() {
-        System.out.println("Uncomment the code to use the immutableFractionDriver");
+        //System.out.println("Uncomment the code to use the immutableFractionDriver");
         /*Fraction a = new Fraction(1, 2);
         Fraction b = new Fraction(3, 4);
         Fraction c = new Fraction(b);

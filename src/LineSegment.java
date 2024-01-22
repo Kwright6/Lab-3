@@ -28,9 +28,9 @@ public class LineSegment {
     // Copy Constructor
     public LineSegment(LineSegment other) {
         // Set this LineSegment to have points with the same coordinates as the points of other
-        // Use the Point2D copy constructors???
-        this.start = new Point2D(other.start);
-        this.end = new Point2D(other.end);
+        // Use the Point2D copy constructors (see page 313 of book)
+        start = new Point2D(other.start);
+        end = new Point2D(other.end);
     }
 
     // Getters & Setters

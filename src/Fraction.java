@@ -7,16 +7,21 @@ Class Constraints
 
  */
 public class Fraction {
-    // TODO: 4.2 Data Fields
-    //  Define a numerator that is public and final.
-            // Why don’t we make this data private?
-    //  Define a denominator that is public and final.
-            // What data types should these items be?
+    // Data Fields
+    public final double numerator; // Q: Why don’t we make this data private? A: So it can be read in another class
+    public final double denominator; // Q: What data types should these items be? A: double or float if we want more precision
 
-    // TODO: 4.3 Constructor
-    //  A constructor that takes the numerator and denominator as arguments.
-    //  A copy constructor that takes a Fraction object as an argument
-    // Give this fraction the same numerator and denominator as the argument fraction.
+    // TODO: 4.3 Constructors
+    public Fraction(double numerator, double denominator) {
+        this.numerator = numerator;
+        this.denominator = denominator;
+    }
+    // todo: A copy constructor that takes a Fraction object as an argument
+    //  Give this fraction the same numerator and denominator as the argument fraction.
+    public Fraction(Fraction other) {
+        numerator = other.numerator;
+        denominator = other.denominator;
+    }
 
 
     // TODO: 4.4 Methods
