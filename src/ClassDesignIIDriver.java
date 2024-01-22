@@ -22,8 +22,8 @@ public class ClassDesignIIDriver {
         //shapeDriver();
         //lineSegmentDriver();
         //immutableFractionDriver();
-        customMathDriver();
-        //passByReferenceDemo();
+        //customMathDriver();
+        passByReferenceDemo();
     }
 
     private static void shapeDriver() {
@@ -114,20 +114,37 @@ public class ClassDesignIIDriver {
         
         System.out.println("a is :"+ a);
         System.out.println("b is :" + b);
-        
+
+        /*
+        Questions:
+        a. What is the primary difference between passing a primitive to a method versus passing an object?
+            - When you pass a primitive type, you pass the literal value and anything done with it in the method does NOT change the value of the original variable in main.
+              When you pass an object, you pass its reference value meaning any changes to that object's values in that method will change the values of the original object in main.
+
+        b. When a primitive is passed to a method, does the scope of that primitive change (i.e., grow to include the called method)?
+            - No
+
+        c. What about when an object is passed to a method?
+            - No but any changes to it will affect the object in main unless it's initiated to point to a new object reference
+
+        d. How then would you describe the scope of an object that has been passed to a method?
+            - Still local to the method but it's connected to the original object unless changed.
+        */
     }
     
-    public static void mutate(int z) {  //does it matter that I called my input data "z" here?
+    public static void mutate(int z) {  //does it matter that I called my input data "z" here? A. No
         z = -1000;  // if z is only a copy, this won't affect the variable a's value in main
         
         //this.foo = -1000;
-        // why does the line above cause compiler errors?
+        // why does the line above cause compiler errors? A. because it is a non-static variable in a static class
     }
     
     public static void mutate(Dimension c) {  
         c.height = -1000;
         c.width = -1000;
         //if I didn't hand this function a copy of b from main, but rather a reference to the object that is known in main as b, what happens here?
+            // A. it will change the values of the object known as main in b
         //if I make a change to c, are my changes reflected back in the code that called this function?  In other words, did this change b of main?
+            // A. Yes
     }
 }
