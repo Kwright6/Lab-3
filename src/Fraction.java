@@ -38,16 +38,34 @@ public class Fraction {
         int newNumerator = 0;
         int newDenominator = -1;
 
-        if (this.numerator != this.denominator) {
+
+        if (this.denominator != that.denominator) {
             // If Uncommon Denominators: [(n1*d2)+(n2*d1)] / (d1*d2)
             newNumerator = ((this.numerator * that.denominator) + (that.numerator * this.denominator));
             newDenominator = this.denominator * that.denominator;
 
-            return new Fraction(newNumerator, newDenominator);
+            // Get in redudced form: helper function below
+            return reduce(newNumerator, newDenominator);
         }
 
         // Common Denominators: (n1+n2) / d1
-        return new Fraction(this.numerator + this.denominator, this.denominator);
+        newNumerator = this.numerator + that.numerator;
+
+        return reduce(newNumerator, this.denominator);
+    }
+
+    // Helper Function
+    public static Fraction reduce(int numerator, int denominator) {
+        int divisor = 10;
+        while (divisor > 1) {
+            if (numerator % divisor == 0 && denominator % divisor == 0) {
+                numerator /= divisor;
+                denominator /= divisor;
+            } else {
+                divisor--;
+            }
+        }
+        return new Fraction(numerator, denominator);
     }
 
     @Override

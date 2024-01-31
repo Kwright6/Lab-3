@@ -19,11 +19,11 @@ public class ClassDesignIIDriver {
     
     public static void main(String[] args) {
         //uncomment the desired Driver or Demo below and run this code to test your progress
-        shapeDriver();
-        lineSegmentDriver();
+        //shapeDriver();
+        //lineSegmentDriver();
         immutableFractionDriver();
-        customMathDriver();
-        passByReferenceDemo();
+        //customMathDriver();
+        //passByReferenceDemo();
     }
 
     private static void shapeDriver() {
@@ -65,14 +65,16 @@ public class ClassDesignIIDriver {
     
     public static void immutableFractionDriver() {
         //System.out.println("Uncomment the code to use the immutableFractionDriver");
-        Fraction z = new Fraction(1, 0);  // TEST
         Fraction a = new Fraction(1, 2);
         Fraction b = new Fraction(3, 4);
         Fraction c = new Fraction(b);
+        Fraction x = new Fraction(1, 4);  // TEST will add with a and reduce
+        Fraction y = new Fraction(1, 0);  // TEST will throw error
     
         System.out.println("a: " + a);
         System.out.println("b: " + b);
         System.out.println("c: " + c);
+        System.out.println("x: " + x);
         
         // fix the following 2 errors
         //System.out.println("a.num:" + a.getNum());
@@ -83,10 +85,12 @@ public class ClassDesignIIDriver {
         // which of the following code is correct to change the fraction a?
         a.add(b);
         a = a.add(b);  // this one will change fraction 'a' as we return a new fraction object that gets stored in 'a'
-        
-        System.out.println("a: " +a);
+        x = x.add(a);
+
+        System.out.println("a: " + a);  // will print in reduced form
         System.out.println("b: " + b);
         System.out.println("c: " + c);
+        System.out.println("x: " + x);
         
         System.out.println("a.equals(b): " + a.equals(b));
         System.out.println("b.equals(c): " + b.equals(c));
