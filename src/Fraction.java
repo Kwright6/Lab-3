@@ -12,8 +12,15 @@ public class Fraction {
 
     // Constructor
     public Fraction(int numerator, int denominator) {
-        this.numerator = numerator;
-        this.denominator = denominator;
+        if (denominator == 0) {
+            // used this so the code will never throw an ArithmeticException for division by zero)
+            System.err.println("Error: Denominator cannot be zero. Setting denominator to 1.");
+            this.numerator = numerator;
+            this.denominator = 1;
+        } else {
+            this.numerator = numerator;
+            this.denominator = denominator;
+        }
     }
     // Copy Constructor
     public Fraction(Fraction other) {
